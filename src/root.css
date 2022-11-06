@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply h-full overflow-hidden;
+}
+
+@supports(padding: max(0px)) {
+  body {
+    @apply m-0;
+    padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  }
+}
+
+
+* {
+  @apply box-border;
+}
